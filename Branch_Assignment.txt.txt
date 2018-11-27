@@ -1,0 +1,46 @@
+Create two file first.txt
+
+-> git init :       initilize the git repository
+-> git status :     this shows on which branch are we, now we are on master branch and there are untracked files present.
+->git add . :      adding the first.txt  and second.txt file to repository.
+
+->git commit -m "Add 2 files and commits directly":   committing the first.txt and second.txt
+		
+
+->git branch :      this command shows on which branch we are.
+-> git log :        to check the checksum of master branch.
+-> cat .git/Head:   shows where the head points- ref: refs/heads/master
+
+-> git branch new_branch :   create new branch
+		
+->git checkout new_branch :   switch to new branch.
+		
+			
+->git commit -am "Adds some new features" :  committing the new branch 
+
+->git mv first.txt.txt new_first.txt :  now being in the new branch rename the first.txt file and also make changes in the second.txt 
+                                        file. and commit the files       
+->git diff master..new_branch
+->git checkout master :
+->git log
+->git merge new_branch
+
+case2:
+
+create third.txt and made changes in the second.txt.
+
+->git add .
+
+->git commit -m "Add third.txt and made changes in second.txt"
+
+->git checkout new_branch
+
+->git commit -m "Now in new Branch Again"
+
+->git checkout master
+
+->git merge new_branch
+
+->git log
+
+->git log --oneline
